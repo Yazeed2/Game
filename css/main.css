@@ -1,0 +1,35 @@
+.Red{
+    color: red;
+}
+.Blue{
+    color: blue;
+}
+.Green{
+    color: green;
+}
+.black{
+    color: black;
+}
+h1{
+    text-align: center;
+}
+body{
+    height: 100vh;
+}
+.canvas{
+    padding: 200px 0 0 0;
+    width: 80%;
+    height: 80;
+    margin: auto;
+    text-align: center;
+}
+button{
+    width: 100px;
+    border: 3 px solid black;
+}
+@media only screen and (max-width=900px){
+    button{
+        width:40%;
+        padding: 50px 0;
+    }
+}
