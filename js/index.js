@@ -1,11 +1,6 @@
 // q learning 
 
-// setInterval(function(){
-//     myMove()
-// },100)
-// myMove()
-
-
+ 
 
 
 let score = 0
@@ -15,33 +10,33 @@ function showCoords(event) {
   var x = event.clientX;
   var y = event.clientY;
   var coor = "X coords: " + x + ", Y coords: " + y;
-  console.log(coor);
+  // console.log(coor);
 
 }
-var reset = 5000
+var reset = 2500
 setInterval(
   start, reset
   );
 
-function getWidth() {
-  return Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
-  );
-}
+// function getWidth() {
+//   return Math.max(
+//     document.body.scrollWidth,
+//     document.documentElement.scrollWidth,
+//     document.body.offsetWidth,
+//     document.documentElement.offsetWidth,
+//     document.documentElement.clientWidth
+//   );
+// }
 
-function getHeight() {
-  return Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight,
-    document.documentElement.clientHeight
-  );
-}
+// function getHeight() {
+//   return Math.max(
+//     document.body.scrollHeight,
+//     document.documentElement.scrollHeight,
+//     document.body.offsetHeight,
+//     document.documentElement.offsetHeight,
+//     document.documentElement.clientHeight
+//   );
+// }
 
 // end of code from stack overflow 
 setInterval(add, 110)
@@ -49,13 +44,13 @@ function add(){
   score++
   $score = document.querySelector('h1')
   $score.innerText = score
-  console.log(score);
+  // console.log(score);
   
 }
 let left = function(velocity, num){
-let upper = [100]
+let upper = [10]
 
-  console.log('here');
+  // console.log('here');
   // var elem = document.querySelectorAll(".animate");
 
   for (let index = 0; index < num; index++) {
@@ -68,9 +63,11 @@ let upper = [100]
   // console.log(elem);
 
   elem.forEach(function (el) {
+  let space = Math.round(Math.random() * (100) + 60)  
+
     y = upper[upper.length - 1]
     el.style.top = y + "px";
-    upper.push(y + 100)
+    upper.push(y + space)
     el.addEventListener("mouseover", func);
   
     var pos = 0;
@@ -81,7 +78,7 @@ let upper = [100]
         el.remove()
         // console.log('removed');
         // alert("done")
-        console.log("no stop")
+        // console.log("no stop")
         // pos =0  ern
         // start()
 
@@ -99,9 +96,9 @@ let upper = [100]
 // start()
 }
 let bottom = function(velocity, num){
-  let upper = [100]
+  let upper = [10]
   
-    console.log('here');
+    // console.log('here');
     // var elem = document.querySelectorAll(".animate");
   
     for (let index = 0; index < num; index++) {
@@ -127,7 +124,7 @@ let bottom = function(velocity, num){
           el.remove()
           // console.log('removed');
           // alert("done")
-          console.log("no stop")
+          // console.log("no stop")
           // pos =0  ern
           // start()
   
@@ -145,9 +142,9 @@ let bottom = function(velocity, num){
   // start()
   }
 let right = function(velocity, num){
-  let upper = [100]
+  let upper = [10]
   
-    console.log('here');
+    // console.log('here');
     // var elem = document.querySelectorAll(".animate");
   
     for (let index = 0; index < num; index++) {
@@ -172,7 +169,7 @@ let right = function(velocity, num){
           el.remove()
           // console.log('removed');
           // alert("done")
-          console.log("no stop")
+          // console.log("no stop")
           // pos =0  ern
           // start()
   
@@ -190,9 +187,9 @@ let right = function(velocity, num){
   // start()
   }
   let fook = function(velocity, num){
-    let upper = [0]
+    let upper = [10]
     
-      console.log('here');
+      // console.log('here');
       // var elem = document.querySelectorAll(".animate");
     
       for (let index = 0; index < num; index++) {
@@ -217,7 +214,7 @@ let right = function(velocity, num){
             el.remove()
             // console.log('removed');
             // alert("done")
-            console.log("no stop")
+            // console.log("no stop")
             // pos =0  ern
             // start()
     
@@ -249,7 +246,7 @@ var arr = [fook,bottom,left,right];
   speed = speed + 0.4
   if (speed > 8){
     speed = 8
-    console.log('top speed');
+    // console.log('top speed');
     
     
   }
@@ -273,6 +270,3 @@ function myMove() {
 }
 
 
-function func() {
-  alert('Game Over :(')
-}

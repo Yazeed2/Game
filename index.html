@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/main.css">
       <script src="js/index.js">
     
       </script>
@@ -11,16 +12,21 @@
       width: 50px;
       height: 50px;
       position: absolute;
-      background-color: red;
+      background-color: black
     }
+
     </style>
 <embed src="123.mp3" autostart="true" style="height: 0; width: 0;">
     </head>
     <body onload="myMove()" onmousemove="showCoords(event)">
+      <header id='topfixed'><h1></h1> <br></header>
     
-    <h1></h1>
     
-    
-    </body>
+<div  id="fixedright"><br></div>
+<div id="fixedleft"><br></div>
 
+    
+<div id="fixed"><br></div>
+    </body>
+<script src="js/border.js"></script>
     </html>
