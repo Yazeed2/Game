@@ -5,7 +5,19 @@
 // },100)
 // myMove()
 
+
+
+
+let score = 0
 // code from stack overflow 
+function showCoords(event) {
+  
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  console.log(coor);
+
+}
 var reset = 5000
 setInterval(
   start, reset
@@ -32,6 +44,14 @@ function getHeight() {
 }
 
 // end of code from stack overflow 
+setInterval(add, 110)
+function add(){
+  score++
+  $score = document.querySelector('h1')
+  $score.innerText = score
+  console.log(score);
+  
+}
 let left = function(velocity, num){
 let upper = [100]
 
@@ -51,7 +71,8 @@ let upper = [100]
     y = upper[upper.length - 1]
     el.style.top = y + "px";
     upper.push(y + 100)
-    el.addEventListener("mousemove", func);
+    el.addEventListener("mouseover", func);
+  
     var pos = 0;
     var id = setInterval(frame, 5);
     function frame() {
@@ -96,7 +117,8 @@ let bottom = function(velocity, num){
       y = upper[upper.length - 1]
       el.style.left = y + "px";
       upper.push(y + 100)
-      el.addEventListener("mousemove", func);
+      el.addEventListener("mouseover", func);
+
       var pos = 0;
       var id = setInterval(frame, 5);
       function frame() {
@@ -141,7 +163,7 @@ let right = function(velocity, num){
       y = upper[upper.length - 1]
       el.style.top = y + "px";
       upper.push(y + 100)
-      el.addEventListener("mousemove", func);
+      el.addEventListener("mouseover", func);
       var pos = 0;
       var id = setInterval(frame, 5);
       function frame() {
@@ -186,7 +208,7 @@ let right = function(velocity, num){
         y = upper[upper.length - 1]
         el.style.left = y + "px";
         upper.push(y + 100)
-        el.addEventListener("mousemove", func);
+        el.addEventListener("mouseover", func);
         var pos = 0;
         var id = setInterval(frame, 5);
         function frame() {
@@ -223,10 +245,13 @@ var arr = [fook,bottom,left,right];
   
   num = Math.round(Math.random() * (10) + 5)  
 
-  ranDir = Math.round(Math.random() * (3 - 0) + 1)  
+  ranDir = Math.round(Math.random() * (3 - 0) + 0)  
   speed = speed + 0.4
-  if (speed > 50){
-    speed = 10
+  if (speed > 8){
+    speed = 8
+    console.log('top speed');
+    
+    
   }
   count++
   arr[ranDir](speed, num)
@@ -235,7 +260,7 @@ var arr = [fook,bottom,left,right];
   }else if(count > 22){
     reset = 1000
   }else if(count > 50){
-    reset = 500
+    
   }
   
 }
