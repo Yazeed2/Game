@@ -1,32 +1,43 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/main.css">
-      <script src="js/index.js">
-    
-      </script>
-    <style>
-  
+
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/index.js">
+
+  </script>
+  <style>
     .animate {
       width: 50px;
       height: 50px;
       position: absolute;
-      background-color: black
+      background-color: black;
     }
+  </style>
+  <!-- <embed src="123.mp3" autostart="true" style="height: 0; width: 0;"> -->
+</head>
 
-    </style>
-<embed src="123.mp3" autostart="true" style="height: 0; width: 0;">
-    </head>
-    <body onload="myMove()" onmousemove="showCoords(event)">
-      <header id='topfixed'><h1></h1> <br></header>
-    
-    
-<div  id="fixedright"><br></div>
-<div id="fixedleft"><br></div>
+<body onmousemove="showCoords(event)">
+  <div id="main">
 
-    
-<div id="fixed"><br></div>
-    </body>
+    <header id='topfixed'>
+      <h1></h1> <br>
+    </header>
+
+    <!-- <video autoplay muted loop src="vid.mp4" width="100%"></video> -->
+
+    <div id="fixedright"><br></div>
+    <div id="fixedleft"><br></div>
+
+
+    <div id="fixed"><br></div>
+  </div>
+  <center>
+    <div id="starting" class="starting">
+    <h2>DON NOT TOUCH THE BLACK SQUARS</h2>
+  <button class="start" onclick="play();begin();">start</button></div>
+</center>
+</body>
 <script src="js/border.js"></script>
-    </html>
+
+</html>

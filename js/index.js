@@ -1,6 +1,6 @@
 // q learning 
 
- 
+// var fs = require('fs'); 
 
 
 let score = 0
@@ -14,9 +14,9 @@ function showCoords(event) {
 
 }
 var reset = 2500
-setInterval(
-  start, reset
-  );
+
+
+
 
 // function getWidth() {
 //   return Math.max(
@@ -39,7 +39,6 @@ setInterval(
 // }
 
 // end of code from stack overflow 
-setInterval(add, 110)
 function add(){
   score++
   $score = document.querySelector('h1')
@@ -239,6 +238,7 @@ function start(){
 var arr = [fook,bottom,left,right];
   let vel = 1360/speed 
   reset = 500
+
   
   num = Math.round(Math.random() * (10) + 5)  
 
@@ -261,7 +261,14 @@ var arr = [fook,bottom,left,right];
   }
   
 }
+function begin(){
 
+  setInterval(
+    start, reset
+    );
+setInterval(add, 110)
+
+}
 
 
 
