@@ -268,5 +268,8 @@ var arr = [fook,bottom,left,right];
 function myMove() {
   start()
 }
-
+function func() {
+  alert('Game Over :(. your score is :'+ score)
+  location.reload();
+}
 
