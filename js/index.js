@@ -1,7 +1,7 @@
 // q learning 
 // var fs = require('fs'); 
 
-
+cross()
 let score = 0
 // code from stack overflow 
 function showCoords(event) {
@@ -276,53 +276,44 @@ function scorethis(score) {
 }
 
 function cross() {
-  let left = function (velocity, num) {
+
     let upper = [30]
   
-    // console.log('here');
-    // var elem = document.querySelectorAll(sss".animate");
+  for (let index = 0; index < 9; index++) {
+    $elem = document.createElement('div')
+    $elem.setAttribute("class", "circle");
+    // document.body.appendChild($elem)
+  }
   
-    for (let index = 0; index < num; index++) {
+    for (let index = 0; index < 5; index++) {
       $elem = document.createElement('div')
       $elem.setAttribute("class", "animate");
       document.body.appendChild($elem)
     }
   
-    var elem = document.querySelectorAll(".animate");
-    // console.log(elem);
+    // var elem = document.querySelectorAll(".animate");
+
   
-    elem.forEach(function (el) {
-      let space = Math.round(Math.random() * (100) + 60)
+    // elem.forEach(function (el) {
+    //   let space = Math.round(Math.random() * (100) + 60)
   
-      y = upper[upper.length - 1]
-      el.style.top = y + "px";
-      upper.push(y + space)
-      el.addEventListener("mouseover", func);
+    //   y = upper[upper.length - 1]
+    //   el.style.top = y + "px";
+    //   upper.push(y + space)
+    //   el.addEventListener("mouseover", func);
   
-      var pos = 0;
-      var id = setInterval(frame, 5);
-      function frame() {
-        if (pos >= 1360) {
-          clearInterval(id);
-          el.remove()
-          // console.log('removed');
-          // alert("done")
-          // console.log("no stop")
-          // pos =0  ern
-          // start()
-  
-  
-  
-        } else {
-          pos += velocity;
-          // console.log('working -_-');
-          // console.log(getWidth());
-  
-          el.style.left = pos + "px";
-        }
-      }
-    })
-    // start()
+    //   var pos = 0;
+    //   var id = setInterval(frame, 5);
+    //   function frame() {
+    //     if (pos >= 1360) {
+    //       clearInterval(id);
+    //       el.remove()
+    //     } else {
+          
+    //       el.style.top = pos + "px";
+
+    //     }
+    //   }
+    // })
   }
   
-}
