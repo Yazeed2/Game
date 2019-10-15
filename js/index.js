@@ -242,21 +242,14 @@ function start() {
     ranDir = Math.round(Math.random())
     console.log(ranDir);
     num = Math.round(Math.random() * (10) + 5)
-    $elem = document.createElement('div')
-    $elem.setAttribute("class", "obc");
-    document.body.appendChild($elem)
-    $elem.addEventListener("mouseover", func);
-
-    $elem.style.top = 200 + "px";
-    $elem.style.left = 200 + "px";
-
+ 
 
     $elem = document.createElement('div')
     $elem.setAttribute("class", "obc");
     document.body.appendChild($elem)
 $elem.addEventListener("mouseover", func);
 $elem.style.top = 200 + "px";
-$elem.style.left = 200 + "px";
+$elem.style.left = 900 + "px";
 
 
     if (ranDir == 1) {
