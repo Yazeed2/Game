@@ -1,7 +1,7 @@
 // q learning 
 // var fs = require('fs'); 
 
-cross()
+
 let score = 0
 // code from stack overflow 
 function showCoords(event) {
@@ -212,10 +212,11 @@ let num = 0
 let speed = 4;
 let count = 0
 function start() {
-  if (score < 200) {
+
   var arr = [fook, bottom, left, right];
   let vel = 1360 / speed
-  reset = 2000
+  if (score < 200) {
+    reset = 2000
 
 
 
@@ -238,7 +239,39 @@ function start() {
       reset = 1000
     }
   } else if (score >= 200) {
-    cross()
+    ranDir = Math.round(Math.random())
+    console.log(ranDir);
+    num = Math.round(Math.random() * (10) + 5)
+    $elem = document.createElement('div')
+    $elem.setAttribute("class", "obc");
+    document.body.appendChild($elem)
+    $elem.addEventListener("mouseover", func);
+
+    $elem.style.top = 200 + "px";
+    $elem.style.left = 200 + "px";
+
+
+    $elem = document.createElement('div')
+    $elem.setAttribute("class", "obc");
+    document.body.appendChild($elem)
+$elem.addEventListener("mouseover", func);
+$elem.style.top = 200 + "px";
+$elem.style.left = 200 + "px";
+
+
+    if (ranDir == 1) {
+      fook(speed, num)
+      bottom(speed, num)
+      
+      console.log('top');
+      
+    } else {
+      left(speed, num)
+      right(speed, num)
+      console.log('bottom');
+      
+    }
+
   }
 
 }
@@ -274,46 +307,3 @@ function scorethis(score) {
   logger.write(score)
   console.log(score + '---------------')
 }
-
-function cross() {
-
-    let upper = [30]
-  
-  for (let index = 0; index < 9; index++) {
-    $elem = document.createElement('div')
-    $elem.setAttribute("class", "circle");
-    // document.body.appendChild($elem)
-  }
-  
-    for (let index = 0; index < 5; index++) {
-      $elem = document.createElement('div')
-      $elem.setAttribute("class", "animate");
-      document.body.appendChild($elem)
-    }
-  
-    // var elem = document.querySelectorAll(".animate");
-
-  
-    // elem.forEach(function (el) {
-    //   let space = Math.round(Math.random() * (100) + 60)
-  
-    //   y = upper[upper.length - 1]
-    //   el.style.top = y + "px";
-    //   upper.push(y + space)
-    //   el.addEventListener("mouseover", func);
-  
-    //   var pos = 0;
-    //   var id = setInterval(frame, 5);
-    //   function frame() {
-    //     if (pos >= 1360) {
-    //       clearInterval(id);
-    //       el.remove()
-    //     } else {
-          
-    //       el.style.top = pos + "px";
-
-    //     }
-    //   }
-    // })
-  }
-  

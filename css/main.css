@@ -126,3 +126,10 @@ height: 20px;
     left: 145px;
     top: 145px;
   }
+
+  .obc {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    background-color: black;
+  }
