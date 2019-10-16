@@ -16,7 +16,22 @@ JavaScript
 ```
 
 ### Wireframes
-None
+
+![](./images/1.jpg)
+
+
+![](./images/2.jpg)
+
+
+![](./images/3.jpg)
+
+
+![](./images/4.jpg)
+
+
+![](./images/5.jpg)
+
+
 
 ### User Stories
 
@@ -31,16 +46,16 @@ None
 ## Planning and Development Process
 
 Day -1
-- created a simple animation usning javascript with editing the posstion from css.
+- Created a simple animation usning javascript with editing the posstion from css.
 
 - made the on mouse hover function 
 
 Day 1
-- created a loop that can animate an object multiple times 
+- Created a loop that can animate an object multiple times 
 
-- created a function that can animate more than one object
+- Created a function that can animate more than one object
 
-- wrote a function that can randomise the direction in wich the object is going to
+- Wrote a function that can randomise the direction in wich the object is going to
 
 - Helped others with thier projects
 
@@ -68,25 +83,39 @@ Day 4
 
 ### Problem-Solving Strategy
 
+- Google it
+
+
 - I made sure to look at the console when having errors and read the error.
 
 - Take a break whenever I feel overwelming 
 
-- 
+- console.log() //every step
+
+- Comment and delet some code
+
+- Ask for help 
+
+
 ### Unsolved problems
 
 - I could not figure out how to make a score baord using fs that can work in the browser during the time limitation
-- there was not time to make an AI enemies 
+
+- There was not time to make an AI enemies 
+
 - I made two leverls but I could not make 5 diffrent levels because of the time constrains
-- fixing all gliches and ways that others can cheat inside the game because I don't have enough data
+
+- Fixing all gliches and ways that others can cheat inside the game because I don't have enough data
 
 ---
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Don't give up easly take another look at what you have from another angle 
+
+* People are awsome 
+
+* Simplicity is amazing 
 
 ---
 
