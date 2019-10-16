@@ -29,8 +29,6 @@ JavaScript
 ![](./images/4.jpg)
 
 
-![](./images/5.jpg)
-
 
 
 ### User Stories
