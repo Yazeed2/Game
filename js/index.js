@@ -1,7 +1,6 @@
 // q learning 
 // var fs = require('fs'); 
 
-
 let score = 0
 // code from stack overflow 
 function showCoords(event) {
@@ -13,54 +12,63 @@ function showCoords(event) {
 
 }
 var reset = 2500
-
-
 // end of code from stack overflow 
+
+//add to the score every time
 function add() {
   score++
   $score = document.querySelector('h1')
   $score.innerText = score
   // console.log(score);
-
 }
+
+//left obsticles
 let left = function (velocity, num) {
   let upper = [30]
 
   // console.log('here');
   // var elem = document.querySelectorAll(sss".animate");
 
+  //to creat a random number of obsticals that is passed throw the paramter
   for (let index = 0; index < num; index++) {
     $elem = document.createElement('div')
     $elem.setAttribute("class", "animate");
     document.body.appendChild($elem)
   }
 
+  //returns an array for all the objects 
   var elem = document.querySelectorAll(".animate");
   // console.log(elem);
 
+  //take each object and do the following 
   elem.forEach(function (el) {
+    //take a random number
     let space = Math.round(Math.random() * (100) + 60)
-
+//make a random spacing and add them to an array so that it could be passed 
     y = upper[upper.length - 1]
     el.style.top = y + "px";
     upper.push(y + space)
+
+    //to make the game end after touching the obj
     el.addEventListener("mouseover", func);
+    el.addEventListener("mousemove", func);
+    el.addEventListener("onmouseover", func);
+
+
 
     var pos = 0;
+
+    //to take a frame every 5 ms 
     var id = setInterval(frame, 5);
     function frame() {
+
+      //if it reaches the maximum (noraml) possition it will destroy itself
       if (pos >= 1360) {
         clearInterval(id);
         el.remove()
-        // console.log('removed');
-        // alert("done")
-        // console.log("no stop")
-        // pos =0  ern
-        // start()
-
-
 
       } else {
+        //speed up 
         pos += velocity;
         // console.log('working -_-');
         // console.log(getWidth());
@@ -71,12 +79,15 @@ let left = function (velocity, num) {
   })
   // start()
 }
+
+//bottom obsticles
 let bottom = function (velocity, num) {
   let upper = [30]
 
   // console.log('here');
   // var elem = document.querySelectorAll(".animate");
 
+  //to creat a random number of obsticals that is passed throw the paramter
   for (let index = 0; index < num; index++) {
     $elem = document.createElement('div')
     $elem.setAttribute("class", "animate");
@@ -86,11 +97,19 @@ let bottom = function (velocity, num) {
   var elem = document.querySelectorAll(".animate");
   // console.log(elem);
 
+  //returns an array for all the objects 
   elem.forEach(function (el) {
+
+  //take each object and do the following 
+
     y = upper[upper.length - 1]
     el.style.left = y + "px";
     upper.push(y + 100)
     el.addEventListener("mouseover", func);
+    el.addEventListener("mousemove", func);
+    el.addEventListener("onmouseover", func);
+
+
 
     var pos = 0;
     var id = setInterval(frame, 5);
@@ -137,6 +156,10 @@ let right = function (velocity, num) {
     el.style.top = y + "px";
     upper.push(y + 100)
     el.addEventListener("mouseover", func);
+    el.addEventListener("mousemove", func);
+    el.addEventListener("onmouseover", func);
+
+    
     var pos = 0;
     var id = setInterval(frame, 5);
     function frame() {
@@ -182,6 +205,8 @@ let fook = function (velocity, num) {
     el.style.left = y + "px";
     upper.push(y + 100)
     el.addEventListener("mouseover", func);
+    el.addEventListener("onmouseover", func);
+
     var pos = 0;
     var id = setInterval(frame, 5);
     function frame() {
@@ -215,8 +240,7 @@ function start() {
 
   var arr = [fook, bottom, left, right];
   let vel = 1360 / speed
-  if (score < 200) {
-    reset = 2000
+  reset = 2000
 
 
 
@@ -238,35 +262,8 @@ function start() {
     } else if (score > 100) {
       reset = 1000
     }
-  } else if (score >= 200) {
-    ranDir = Math.round(Math.random())
-    console.log(ranDir);
-    num = Math.round(Math.random() * (10) + 5)
  
-
-    $elem = document.createElement('div')
-    $elem.setAttribute("class", "obc");
-    document.body.appendChild($elem)
-$elem.addEventListener("mouseover", func);
-$elem.style.top = 200 + "px";
-$elem.style.left = 900 + "px";
-
-
-    if (ranDir == 1) {
-      fook(speed, num)
-      bottom(speed, num)
-      
-      console.log('top');
-      
-    } else {
-      left(speed, num)
-      right(speed, num)
-      console.log('bottom');
-      
-    }
-
-  }
-
+    
 }
 function begin() {
 
@@ -282,14 +279,14 @@ function begin() {
 function myMove() {
   start()
 }
-function func() {
+// function func() {
 
-  var fs = require('fs')
+//   var fs = require('fs')
 
-  scorethis('123')
-  // alert('Game Over :(. your score is :'+ score)
-  location.reload();
-}
+//   scorethis('123')
+//   // alert('Game Over :(. your score is :'+ score)
+//   location.reload();
+// }
 
 
 function scorethis(score) {

@@ -15,11 +15,7 @@ $fixed = document.getElementById('topfixed')
 
 $fixed.addEventListener("mouseover", func);
 
-//game over to desplay the score and reloads the page
-function func() {
-    alert('Game Over :(. your score is :'+ score)
-    location.reload();
-  }
+
 //this hides the game  
 $main = document.getElementById('main')
 $main.setAttribute('style', 'display:none;')
@@ -30,6 +26,13 @@ $starting = document.getElementById('starting')
 function play(){
 $main.setAttribute('style', 'display:block;')
 $starting.setAttribute('style', 'display:none;')
+}
+
+//hides the game and loads the score
 
 
+//game over to desplay the score and reloads the page
+function func() {
+  alert('Game Over :( \n your score is :'+ score)
+  location.reload();
 }
